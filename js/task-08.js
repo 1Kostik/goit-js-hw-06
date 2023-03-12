@@ -4,16 +4,15 @@ formLogin.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
-  const formData = {
-    mail: event.currentTarget.email.value,
-    password: event.currentTarget.password.value,
-  };
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-  if ((formData.mail && formData.password) === "") {
+  if ((email.value && password.value) === "") {
     const message = "Fill in all fields correctly!";
     alert(message);
   } else {
-    console.log(formData);
+    console.log({ elements: { email: email.value, password: password.value } });
     formLogin.reset();
   }
 }
