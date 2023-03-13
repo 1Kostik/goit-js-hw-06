@@ -6,7 +6,7 @@ const divBoxes = document.querySelector("#boxes");
 buttonDestroy.addEventListener("click", destroyBoxes);
 
 function destroyBoxes() {
-  divBoxes.remove();
+  divBoxes.innerHTML = "";
 }
 buttonCreate.addEventListener("click", getAmount);
 function getAmount() {
@@ -26,6 +26,7 @@ function createBoxes(amount) {
   }
 
   divBoxes.append(...divElemens);
+  console.log(divBoxes)
 }
 
 function getRandomHexColor() {
