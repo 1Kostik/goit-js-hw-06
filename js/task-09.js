@@ -10,6 +10,8 @@ function onButtonClick() {
       .padStart(6, 0)}`;
   }
   body.style.backgroundColor = getRandomHexColor();
+  console.log(body.style.backgroundColor)
 
-  bgColor.textContent = `${getRandomHexColor()}`;
+  bgColor.textContent = `${body.style.backgroundColor}`;
+  
 }
